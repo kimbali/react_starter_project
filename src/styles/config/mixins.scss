@@ -1,0 +1,77 @@
+/*  MEDIA QUERY MIXIN
+
+BREAKPOINTS:
+    Kim = mobil + 320px
+    Boris = tablet + 768px
+    Pat = laptop + 992px
+    Jordi = desktop + 1200px
+
+USAGE:
+    @include media(kim) {
+        ...
+    }
+*/
+
+$kim: "screen and (min-width: 320px) and ( max-width: 767px)"; // strict mobil
+$boris: "screen and (min-width: 768px) and (max-width: 991px)"; // strict tablet
+$borispatjordi: "screen and (min-width: 768px)"; // from tablet
+$kimboris: "screen and (max-width: 991px)"; // mobil and tablet
+$pat: "screen and (min-width: 992px) and (max-width: 1279px)"; // strict small desktop
+$patjordi: "screen and (min-width: 992px)"; // from small desktop
+$jordi: "screen and (min-width: 1200px)"; // from desktop
+
+@mixin media($point) {
+  @if $point == kim {
+    @media #{$kim} {
+      @content;
+    }
+  } @else if $point == boris {
+    @media #{$boris} {
+      @content;
+    }
+  } @else if $point == borispatjordi {
+    @media #{$borispatjordi} {
+      @content;
+    }
+  } @else if $point == kimboris {
+    @media #{$kimboris} {
+      @content;
+    }
+  } @else if $point == pat {
+    @media #{$pat} {
+      @content;
+    }
+  } @else if $point == patjordi {
+    @media #{$patjordi} {
+      @content;
+    }
+  } @else if $point == jordi {
+    @media #{$jordi} {
+      @content;
+    }
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin collapse($maxHeight) {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  height: auto;
+  max-height: $maxHeight;
+
+  &.collapsed {
+    max-height: 0;
+  }
+}
+
+@mixin squareSize($size, $height: $size) {
+  width: $size;
+  height: $height;
+  min-width: $size;
+  min-height: $height;
+}

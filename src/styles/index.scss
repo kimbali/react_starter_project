@@ -1,0 +1,14 @@
+// Config
+@import "./config/paleta.scss";
+@import "./config/fonts.scss";
+@import "./config/config.scss";
+@import "./config/mixins.scss";
+@import "./config/keyframes.scss";
+
+// Common
+@import "./htmlReset.scss";
+
+// Components
+@import "../components/layout";
+@import "../components/layout/footer";
+@import "../components/layout/header";

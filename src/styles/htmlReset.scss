@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App,
+.layout {
+  height: 100%;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: $handFont;
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--section-color);
+  box-shadow: $mainShadow;
+  color: var(--main-color);
+}
+
+footer {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li,
+img,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 0 $afterTitle;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--main-color);
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+a {
+  color: var(--extra-color);
+  font-size: 1.5rem;
+}

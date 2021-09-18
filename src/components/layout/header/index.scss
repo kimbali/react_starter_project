@@ -1,0 +1,19 @@
+header {
+  background-color: $white;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px $sideSpace;
+
+  img {
+    height: 44px;
+    margin-right: 16px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .links {
+    flex-grow: 1;
+  }
+}

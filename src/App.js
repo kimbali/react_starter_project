@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from 'components/layout'
+import Landing from 'components/pages/landing/Landing'
+import Profile from 'components/pages/profile/Profile'
+import { Route, Switch, Redirect } from 'wouter'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Layout>
+        <Switch>
+          <Route path='/profile/:nikname' component={Profile} />
+          <Route path='/' component={Landing} />
+          <Redirect to='/' />
+        </Switch>
+      </Layout>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

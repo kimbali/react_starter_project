@@ -1,0 +1,19 @@
+/* SPACES */
+$sideSpace: 40px;
+$betweenSections: 40px;
+$afterTitle: 40px;
+$afterParraf: 32px;
+$aroundElement: 32px;
+
+/* COLORS */
+:root {
+  --main-color: #ffb894;
+  --secondary-color: #f0e1b9ff;
+  --extra-color: rgba(213, 91, 91, 1);
+  --text-color: #7f7f7f;
+  --background-color: #fafafa;
+  --section-color: #e5e5e5;
+}
+
+/* SHADOWS */
+$mainShadow: $nice-shadow;
