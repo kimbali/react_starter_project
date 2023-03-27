@@ -5,9 +5,9 @@ function Landing () {
   return (
     <div>
       <h1 className='hello-title'>HELLO</h1>
-      <h2 className='hello-subtitle'>DARLING</h2>
+      <h2 className='hello-subtitle'>WORLD</h2>
       <Link to='/profile/kims'>
-        Link to Kims profile
+        Link to profile
       </Link>
     </div>
   )
